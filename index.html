@@ -1,59 +1,276 @@
-<hmtl> 
-  <head>
-    <title>Strona główna</title>
-    <!--head - INFORMACJE DLA PRZEGLĄDARKI, SKRYPTY, STYLE-->
-    <meta charset="utf-8">
+<html>
 
-    <style>
+	<head>
+		<title>Strona główna</title>
+		<!-- head - informacje dla przeglądarki, skrypty, style -->
+		<meta charset="UTF-8">
+		
+		<style>
+		/* style z W3 - start */
 
-      * {
-        margin: 0;
-    }
+img {
+  vertical-align: middle;
+}
 
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
 
-      .bg-green {
-        background-color: #6bd80c;
-        color: white;
-        padding: 10px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 10px;
-    }
-      #info {
-        position: fixed;
-        top: 0;
-        left; 0;
-        z-index:9;
-        width: 100vw;
-    }
-      body {
-        min-height: 200vh;
-    }
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
 
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
 
-    </style> 
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-  </head>
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-  <body>
-    <header>
-      <div id="info" class="bg-class">
-        pepe
-      </div>
-    </header>
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-    <main>
-    </main>
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
 
-    <footer>
-    </footer>
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
 
-  </body> 
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
 
+.active,
+.demo:hover {
+  opacity: 1;
+}
+		
+		/*style z W3 - stop */
+		
+		
+			* {
+				margin: 0;
+			}
+		
+			.bg-green {
+				background-color: #6ab926;
+				color: #fff;
+				padding: 10px;
+				text-align: center;
+				font-family: sans-serif;
+				font-size: 10px;
+			}
+			
+			#info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100vw;
+    min-height: 25px;
+}
+			
+#nav {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 20px;
+	column-gap: 20px;
+	overflow-x: auto;
+}
 
+#nav > div {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    column-gap: 20px;
+}
+			
+			body {
+				min-height: 200vh;
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<header>
+			<div id="info" class="bg-green">Curabitur ac felis arcu. Sed euismod, urna eu tincidunt consectetur, nisi nisl lacinia mi, <strong>a tincidunt nisi nisl sit amet urna</strong></div>
+			
+			<div id="nav">
+			  <div>
+			    <div>
+			      <a href="tel:500600700">500600700</a>
+			    </div>
+			    <div>
+			      <a href="mailto:mail@example.com">mail@example.com</a>
+			    </div>
+			  </div>
+			  <div>
+			    <div>
+			      <a href="https://www.google.pl/" target="_blank">Google</a>
+			    </div>
+				<div>
+			      <a href="https://synergia.librus.pl/interfejs_lekcyjny" target="_blank">Librus</a>
+			    </div>
+			  </div>
+			</div>
+			
+			
+			<div id="main-slider">
+			  <h2 style="text-align:center">Slideshow Gallery</h2>
 
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+  </div>
 
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg" style="width:100%">
+  </div>
 
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%">
+  </div>
 
-</hmtl>
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_5terre_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+			</div>
+		</header>
+		
+		<main>
+		  Dodajcie tutaj własną treść - teksty, kolumny, tabele, grafiki itp.
+		</main>
+		
+		<footer>
+		</footer>
+	
+	</body>
+
+</html>
